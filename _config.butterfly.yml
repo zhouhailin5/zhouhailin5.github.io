@@ -1,0 +1,31 @@
+# ============================================
+# Butterfly 主题配置（v1.0 精简版）
+# 说明：未在此文件配置的项使用主题内置默认值
+# 文档：https://butterfly.js.org/
+# ============================================
+
+# 导航菜单
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+
+# 社交链接（后续可在此追加）
+social:
+
+# 头像
+avatar:
+  img: /img/avatar.png
+
+# 页脚
+footer:
+  owner:
+    enable: true
+    since: 2026
+    custom_text: i WANT
+
+# 文章页显示更新时间
+post_meta:
+  updated:
+    display: true
