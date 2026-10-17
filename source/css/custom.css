@@ -80,3 +80,23 @@
 #page-header.full_page #nav .site-page:hover i {
   color: #2f6f9f;
 }
+
+/* ---------- 6. 文章页分类并列显示（去掉层级箭头，改成并列标签） ---------- */
+span.post-meta-categories .post-meta-separator.fa-angle-right {
+  display: none;
+}
+
+span.post-meta-categories .post-meta-icon.fa-inbox {
+  display: none;
+}
+
+span.post-meta-categories a.post-meta-categories {
+  margin: 0 4px;
+  padding: 1px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+[data-theme='dark'] span.post-meta-categories a.post-meta-categories {
+  border-color: rgba(255, 255, 255, 0.35);
+}
