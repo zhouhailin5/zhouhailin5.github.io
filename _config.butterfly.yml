@@ -39,7 +39,7 @@ footer:
   owner:
     enable: true
     since: 2026
-    custom_text: i WANT
+    custom_text: 其实我在想
 
 # 文章页显示更新时间
 post_meta:
