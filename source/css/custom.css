@@ -41,3 +41,11 @@
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
+
+/* ---------- 3. 右上角浮动图标改黑色 ---------- */
+#rightside > div > button,
+#rightside > div > a,
+#rightside > div > button i,
+#rightside > div > a i {
+  color: #000;
+}
