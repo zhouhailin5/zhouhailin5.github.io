@@ -1,0 +1,43 @@
+/* ==========================================================
+   自定义样式（不修改主题源码）
+   1. 首页头图透明，让全站背景从顶部开始显示
+   2. 内容卡片半透明磨砂，背景更明显
+   ========================================================== */
+
+/* ---------- 1. 首页头图透明 ---------- */
+#page-header.full_page {
+  background-color: transparent !important;
+}
+
+#page-header.full_page:before {
+  background-color: transparent !important;
+}
+
+/* 浅色背景下的标题可读性 */
+#page-header.full_page #site-title,
+#page-header.full_page #site-subtitle {
+  color: #2b3a55;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- 2. 内容卡片半透明磨砂 ---------- */
+:root {
+  --card-bg: rgba(255, 255, 255, 0.55);
+}
+
+[data-theme='dark'] {
+  --card-bg: rgba(18, 18, 18, 0.55);
+}
+
+.recent-post-item,
+.card-widget,
+#pagination,
+#post,
+#page,
+#archive,
+#tag,
+#category,
+.post-copyright {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}

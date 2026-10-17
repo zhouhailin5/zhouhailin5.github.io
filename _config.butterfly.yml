@@ -22,6 +22,11 @@ aside:
   card_author:
     enable: false
 
+# 自定义样式注入
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+
 # 社交链接（后续可在此追加）
 social:
 
