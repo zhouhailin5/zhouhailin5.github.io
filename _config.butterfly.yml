@@ -7,6 +7,10 @@
 # 导航菜单
 menu:
   首页: / || fas fa-home
+  日记: /categories/日记/ || fas fa-book-open
+  笔记: /categories/笔记/ || fas fa-sticky-note
+  随笔: /categories/随笔/ || fas fa-pen-fancy
+  图集: /categories/图集/ || fas fa-images
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
