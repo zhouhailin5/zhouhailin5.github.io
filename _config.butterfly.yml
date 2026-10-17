@@ -14,6 +14,9 @@ menu:
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
 
+# 全站背景图
+background: /img/bg.jpg
+
 # 社交链接（后续可在此追加）
 social:
 
