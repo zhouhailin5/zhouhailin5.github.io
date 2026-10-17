@@ -23,7 +23,7 @@ aside:
     enable: false
   card_announcement:
     enable: true
-    content: 欢迎王同学莅临指导
+    content: HELLO WORLD
 
 # 自定义样式注入
 inject:
