@@ -82,21 +82,25 @@
 }
 
 /* ---------- 6. 文章页分类并列显示（去掉层级箭头，改成并列标签） ---------- */
-span.post-meta-categories .post-meta-separator.fa-angle-right {
+span.post-meta-categories .post-meta-separator.fa-angle-right,
+.article-meta .fa-angle-right.article-meta-link {
   display: none;
 }
 
-span.post-meta-categories .post-meta-icon.fa-inbox {
+span.post-meta-categories .post-meta-icon.fa-inbox,
+.article-meta .fa-inbox {
   display: none;
 }
 
-span.post-meta-categories a.post-meta-categories {
+span.post-meta-categories a.post-meta-categories,
+.article-meta a.article-meta__categories {
   margin: 0 4px;
   padding: 1px 8px;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
 
-[data-theme='dark'] span.post-meta-categories a.post-meta-categories {
+[data-theme='dark'] span.post-meta-categories a.post-meta-categories,
+[data-theme='dark'] .article-meta a.article-meta__categories {
   border-color: rgba(255, 255, 255, 0.35);
 }
