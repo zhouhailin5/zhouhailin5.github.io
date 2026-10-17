@@ -49,3 +49,22 @@
 #rightside > div > a i {
   color: #000;
 }
+
+/* ---------- 4. 底部区域透明 ---------- */
+#footer {
+  background-color: transparent !important;
+}
+
+#footer > *,
+#footer a {
+  color: #4a4a4a;
+}
+
+#footer a:hover {
+  color: #49b1f5;
+}
+
+[data-theme='dark'] #footer > *,
+[data-theme='dark'] #footer a {
+  color: #cccccc;
+}
