@@ -17,6 +17,11 @@ menu:
 # 全站背景图
 background: /img/bg.jpg
 
+# 侧栏
+aside:
+  card_author:
+    enable: false
+
 # 社交链接（后续可在此追加）
 social:
 
