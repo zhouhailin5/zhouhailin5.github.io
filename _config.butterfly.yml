@@ -13,7 +13,6 @@ menu:
   图集: /categories/图集/ || fas fa-images
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
-  分类: /categories/ || fas fa-folder-open
 
 # 社交链接（后续可在此追加）
 social:
