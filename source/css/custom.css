@@ -68,3 +68,15 @@
 [data-theme='dark'] #footer a {
   color: #cccccc;
 }
+
+/* ---------- 5. 顶部导航菜单（图标 + 文字）改黑色 ---------- */
+#page-header.full_page #nav .site-page,
+#page-header.full_page #nav .site-page i,
+#page-header.full_page #nav .site-name {
+  color: #000;
+}
+
+#page-header.full_page #nav .site-page:hover,
+#page-header.full_page #nav .site-page:hover i {
+  color: #2f6f9f;
+}
