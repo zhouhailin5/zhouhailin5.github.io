@@ -21,6 +21,9 @@ background: /img/bg.jpg
 aside:
   card_author:
     enable: false
+  card_announcement:
+    enable: true
+    content: 欢迎王同学莅临指导
 
 # 自定义样式注入
 inject:
