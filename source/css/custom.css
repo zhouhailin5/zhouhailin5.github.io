@@ -104,3 +104,44 @@ span.post-meta-categories a.post-meta-categories,
 [data-theme='dark'] .article-meta a.article-meta__categories {
   border-color: rgba(255, 255, 255, 0.35);
 }
+
+/* ---------- 7. 霞鹜文楷字体 ---------- */
+body {
+  font-family: 'LXGW WenKai', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+
+/* ---------- 8. 文章内图片圆角 + 阴影 ---------- */
+#article-container img {
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- 9. 首页文章卡片悬浮动效 ---------- */
+.recent-post-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.recent-post-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* ---------- 10. 滚动条美化 ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}

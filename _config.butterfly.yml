@@ -17,6 +17,9 @@ menu:
 # 全站背景图
 background: /img/bg.jpg
 
+# 代码块 Mac 风格（红黄绿三点）
+highlight_theme: mac
+
 # 侧栏
 aside:
   card_author:
@@ -29,6 +32,7 @@ aside:
 inject:
   head:
     - <link rel="stylesheet" href="/css/custom.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 
 # 社交链接（后续可在此追加）
 social:
