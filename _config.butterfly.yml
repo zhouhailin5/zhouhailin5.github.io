@@ -20,10 +20,9 @@ background: /img/bg.jpg
 # 代码块 Mac 风格（红黄绿三点）
 highlight_theme: mac
 
-# 鼠标点击烟花特效
-fireworks:
+# 鼠标点击心形特效
+click_heart:
   enable: true
-  zIndex: 9999
   mobile: true
 
 # 侧栏
