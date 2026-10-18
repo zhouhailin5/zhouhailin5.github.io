@@ -20,6 +20,12 @@ background: /img/bg.jpg
 # 代码块 Mac 风格（红黄绿三点）
 highlight_theme: mac
 
+# 鼠标点击烟花特效
+fireworks:
+  enable: true
+  zIndex: 9999
+  mobile: true
+
 # 侧栏
 aside:
   card_author:
