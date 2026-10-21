@@ -38,9 +38,6 @@ subtitle:
   enable: true
   effect: true
   source: 3
-  sub:
-    - 其实我在想
-    - 记录生活的点滴
 
 # 背景固定彩带特效
 canvas_ribbon:
