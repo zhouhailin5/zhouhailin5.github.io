@@ -30,20 +30,26 @@
     });
   }
 
-  /* 3. 小黄挂件：点击切换比心姿势并冒爱心 */
+  /* 3. 小黄挂件：点击循环切换姿势（站姿/比心/新年/顶橘子），比心时冒爱心 */
   function pet() {
     if (document.getElementById('xx-pet')) return;
     var d = document.createElement('div');
     d.id = 'xx-pet';
     d.title = '点点我~';
-    d.innerHTML = '<img id="xx-pet-img" src="/img/pet-idle.png" alt="小黄">';
+    var poses = [
+      { src: '/img/pet-idle.png', heart: false },
+      { src: '/img/pet-heart.png', heart: true },
+      { src: '/img/pet-lion.png', heart: false },
+      { src: '/img/pet-balance.png', heart: false }
+    ];
+    var idx = 0;
+    d.innerHTML = '<img id="xx-pet-img" src="' + poses[0].src + '" alt="小黄">';
     document.body.appendChild(d);
     var img = document.getElementById('xx-pet-img');
-    var heart = false;
     d.addEventListener('click', function () {
-      heart = !heart;
-      img.src = heart ? '/img/pet-heart.png' : '/img/pet-idle.png';
-      if (heart) spawnHearts(d);
+      idx = (idx + 1) % poses.length;
+      img.src = poses[idx].src;
+      if (poses[idx].heart) spawnHearts(d);
     });
   }
 

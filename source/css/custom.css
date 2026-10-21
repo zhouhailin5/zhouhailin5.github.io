@@ -304,8 +304,8 @@ body {
 }
 
 #xx-pet img {
-  width: 92px;
-  height: auto;
+  height: 110px;
+  width: auto;
   display: block;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.22));
   pointer-events: none;
@@ -327,6 +327,6 @@ body {
 
 @media screen and (max-width: 768px) {
   #xx-pet img {
-    width: 68px;
+    height: 82px;
   }
 }
