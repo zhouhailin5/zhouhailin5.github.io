@@ -25,6 +25,32 @@ click_heart:
   enable: true
   mobile: true
 
+# 页面进入过渡动画
+enter_transitions: true
+
+# 加载动画（全屏转圈）
+preloader:
+  enable: true
+  source: 1
+
+# 首页打字机副标题
+subtitle:
+  enable: true
+  effect: true
+  source: false
+  sub:
+    - 其实我在想
+    - 记录生活的点滴
+
+# 背景固定彩带特效
+canvas_ribbon:
+  enable: true
+  size: 150
+  alpha: 0.4
+  zIndex: -1
+  click_to_change: false
+  mobile: false
+
 # 侧栏
 aside:
   card_author:
@@ -38,6 +64,9 @@ inject:
   head:
     - <link rel="stylesheet" href="/css/custom.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
+  bottom:
+    - <script src="/js/beautify.js"></script>
+    - <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 
 # 社交链接（后续可在此追加）
 social:
@@ -51,7 +80,7 @@ footer:
   owner:
     enable: true
     since: 2026
-    custom_text: 其实我在想
+    custom_text: '其实我在想 <span id="foot-heart">❤</span>'
 
 # 文章页显示更新时间
 post_meta:
