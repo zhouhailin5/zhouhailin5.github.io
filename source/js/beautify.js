@@ -30,9 +30,45 @@
     });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', reveal);
-  } else {
+  /* 3. 小黄挂件：点击切换比心姿势并冒爱心 */
+  function pet() {
+    if (document.getElementById('xx-pet')) return;
+    var d = document.createElement('div');
+    d.id = 'xx-pet';
+    d.title = '点点我~';
+    d.innerHTML = '<img id="xx-pet-img" src="/img/pet-idle.png" alt="小黄">';
+    document.body.appendChild(d);
+    var img = document.getElementById('xx-pet-img');
+    var heart = false;
+    d.addEventListener('click', function () {
+      heart = !heart;
+      img.src = heart ? '/img/pet-heart.png' : '/img/pet-idle.png';
+      if (heart) spawnHearts(d);
+    });
+  }
+
+  function spawnHearts(container) {
+    for (var i = 0; i < 5; i++) {
+      var s = document.createElement('span');
+      s.className = 'xx-float-heart';
+      s.textContent = '❤';
+      s.style.left = (15 + Math.random() * 65) + '%';
+      s.style.animationDelay = i * 0.15 + 's';
+      container.appendChild(s);
+      (function (el, delay) {
+        setTimeout(function () { el.remove(); }, 1600 + delay);
+      })(s, i * 150);
+    }
+  }
+
+  function init() {
     reveal();
+    pet();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 })();
