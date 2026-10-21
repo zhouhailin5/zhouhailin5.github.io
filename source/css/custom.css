@@ -291,7 +291,7 @@ body {
 /* ---------- 23. 小黄挂件（替换看板娘） ---------- */
 #xx-pet {
   position: fixed;
-  right: 16px;
+  left: 16px;
   bottom: 70px;
   z-index: 999;
   cursor: pointer;
@@ -300,7 +300,7 @@ body {
 }
 
 #xx-pet:hover {
-  transform: scale(1.08) rotate(-3deg);
+  transform: scale(1.08) rotate(3deg);
 }
 
 #xx-pet img {
