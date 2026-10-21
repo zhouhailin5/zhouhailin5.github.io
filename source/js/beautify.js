@@ -67,35 +67,39 @@
     poemRotate();
   }
 
-  /* 4. 随机诗句定时轮换：每 3 秒自动换一句（今日诗词 API） */
+  /* 4. 随机诗句轮换：110ms/字打完一整句后，自动换下一句（今日诗词 API） */
   function poemRotate() {
     var el = document.getElementById('site-subtitle');
     if (!el) return;
-    var timer = null;
 
-    function typeText(text) {
-      clearInterval(timer);
+    function typeText(text, done) {
       el.textContent = '';
       var i = 0;
-      timer = setInterval(function () {
+      var timer = setInterval(function () {
         el.textContent = text.slice(0, ++i);
-        if (i >= text.length) clearInterval(timer);
-      }, 55);
+        if (i >= text.length) {
+          clearInterval(timer);
+          done();
+        }
+      }, 110);
     }
 
-    function fetchPoem() {
+    function next() {
       fetch('https://v1.jinrishici.com/all.json')
         .then(function (r) { return r.json(); })
         .then(function (d) {
           if (d && d.content) {
-            typeText(d.content + ' —— ' + d.author + '《' + d.origin + '》');
+            typeText(d.content + ' —— ' + d.author + '《' + d.origin + '》', function () {
+              setTimeout(next, 800);
+            });
+          } else {
+            setTimeout(next, 2000);
           }
         })
-        .catch(function () {});
+        .catch(function () { setTimeout(next, 2000); });
     }
 
-    fetchPoem();
-    setInterval(fetchPoem, 3000);
+    next();
   }
 
   if (document.readyState === 'loading') {
