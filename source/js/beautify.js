@@ -64,6 +64,38 @@
   function init() {
     reveal();
     pet();
+    poemRotate();
+  }
+
+  /* 4. 随机诗句定时轮换：每 3 秒自动换一句（今日诗词 API） */
+  function poemRotate() {
+    var el = document.getElementById('site-subtitle');
+    if (!el) return;
+    var timer = null;
+
+    function typeText(text) {
+      clearInterval(timer);
+      el.textContent = '';
+      var i = 0;
+      timer = setInterval(function () {
+        el.textContent = text.slice(0, ++i);
+        if (i >= text.length) clearInterval(timer);
+      }, 55);
+    }
+
+    function fetchPoem() {
+      fetch('https://v1.jinrishici.com/all.json')
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d && d.content) {
+            typeText(d.content + ' —— ' + d.author + '《' + d.origin + '》');
+          }
+        })
+        .catch(function () {});
+    }
+
+    fetchPoem();
+    setInterval(fetchPoem, 3000);
   }
 
   if (document.readyState === 'loading') {

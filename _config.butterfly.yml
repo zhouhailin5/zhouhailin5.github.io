@@ -33,11 +33,13 @@ preloader:
   enable: true
   source: 1
 
-# 首页打字机副标题（source: 3 = 今日诗词，每次访问随机诗句）
+# 首页副标题（打字与轮换由 beautify.js 接管，此处仅提供占位文字）
 subtitle:
   enable: true
-  effect: true
-  source: 3
+  effect: false
+  source: false
+  sub:
+    - 但愿人长久
 
 # 背景固定彩带特效
 canvas_ribbon:
